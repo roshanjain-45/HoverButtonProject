@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.splashScreen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    /* text-align: center; */
+    color: white;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    font-size: 2em;
+    z-index: 10;
+    animation: fade-out ease-out forwards;
+    animation-delay: 2s;
+
+}
+
+@keyframes fade-in {
+        to{
+            opacity: 1;
+        }
+}
+@keyframes fade-out{
+   to{
+    opacity: 0;
+    z-index: -10;
+   }
+}
+.splashScreen h1{
+    animation: fade-in 1s ease-in forwards;
+    opacity: 0;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    
+}
+
+.box{
+    background-color: rgb(0, 195, 0);
+    color: white;
+    padding: 1em 3em;
+    font-size: 18px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 0px black;
+    z-index: 1;
+    position: relative;
+}
+.box::before{
+    content:"";
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 0px black;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all .8s;
+    z-index: -1;
+}
+
+.box:hover::before{
+    cursor: pointer;
+    transform: scaleX(1);
+    
+}
