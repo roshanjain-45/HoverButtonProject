@@ -23,7 +23,7 @@ html,body{
     animation-delay: 2s;
 }
 
-@media(max-width:800px) {
+@media(max-width:1080px) {
     .splashScreen{
         display: flex;
         justify-content: center;
