@@ -88,7 +88,7 @@ html,body{
     right: 0;
     left: 0;
     transform: scaleX(0);
-    transform-origin: left;
+/*     transform-origin: left; */
     transition: all .8s;
     z-index: -1;
 }
