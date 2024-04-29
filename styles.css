@@ -76,6 +76,7 @@ html,body{
     box-shadow: 5px 5px 10px 0px black;
     z-index: 1;
     position: relative;
+    overflow: hidden;
 }
 .box::before{
     content:"";
@@ -87,14 +88,16 @@ html,body{
     bottom: 0;
     right: 0;
     left: 0;
-    transform: scaleX(0);
+    width: 0;
+    /* transform: scaleX(0); */
     /* transform-origin: left;a */
-    transition: all .8s;
+    transition: .8s;
     z-index: -1;
 }
 
 .box:hover::before{
     cursor: pointer;
-    transform: scaleX(1);
+    width: 100%;
+    /* transform: scaleX(1); */
     
 }
